@@ -8,8 +8,9 @@ def rbin(question)
       Integer(num)
     end
     return array
-  rescue ArgumentError
-    puts "Digite apenas numeros inteiros"
+  rescue ArgumentError => e
+    puts "Erro: #{e.message}"
+    puts "IMPORTANTE: Digite apenas numeros inteiros"
     return nil
   end
 
@@ -21,5 +22,5 @@ if in_array != nil
   out_array = in_array.map do |num|
     num ** 3
   end
-  puts out_array
+  print out_array
 end
